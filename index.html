@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<!-- dla każdego slidera osobne strzalki: -->
+<div id="skinArrows">
+  <div id="prevSkin" class="arrow"></div><div id="nextSkin" class="arrow"></div>
+</div>
+<div id="hairArrows">
+  <div id="prevHair" class="arrow"></div><div id="nextHair" class="arrow"></div>
+</div>
+<div id="eyesArrows">
+  <div id="prevEyes" class="arrow"></div><div id="nextEyes" class="arrow"></div>
+</div>
+<div id="noseArrows">
+  <div id="prevNose" class="arrow"></div><div id="nextNose" class="arrow"></div>
+</div>
+<div id="mouthArrows">
+  <div id="prevMouth" class="arrow"></div><div id="nextMouth" class="arrow"></div>
+</div>
+<div id="topArrows">
+  <div id="prevTop" class="arrow"></div><div id="nextTop" class="arrow"></div>
+</div>
+<div id="bottomArrows">
+  <div id="prevBottom" class="arrow"></div><div id="nextBottom" class="arrow"></div>
+</div>
+<div id="shoesArrows">
+  <div id="prevShoes" class="arrow"></div><div id="nextShoes" class="arrow"></div>
+</div>
+<div id="gadgetArrows">
+  <div id="prevGadget" class="arrow"></div><div id="nextGadget" class="arrow"></div>
+</div>
+<div id="backArrows">
+  <div id="prevBack" class="arrow"></div><div id="nextBack" class="arrow"></div>
+</div>
+<!-- tp bedzie ekran powitalny -->
+<section>
+    <div class="loadText1">Ludzik</div>
+    <div class="loadText2">yourself!</div>
+</section>
+<!-- menu: -->
+    <ul>
+      <li id="menuUp" class="arrow"></li>
+	      <li id="chooseSkin" class="active">Skin</li>
+		  <li id="chooseHair">Hair</li>
+	      <li id="chooseEyes">Eyes</li>
+	      <li id="chooseNose">Nose</li>
+	      <li id="chooseMouth">Mouth</li>
+	      <li id="chooseTop">Top</li>
+	      <li id="chooseBottom">Bottom</li>
+	      <li id="chooseShoes">Shoes</li>
+	      <li id="chooseGadget">Gadget</li>
+	      <li id="chooseBack">Background</li>
+      <li id="menuDown" class="arrow"></li>
+    </ul>
+<!-- </section> -->
+<!-- sekcja glowna z ludzikiem -->
+<section class="ludzikContainer">
+	<div class="ludzik"></div>
+	<!-- slider skin: -->
+	<div class="slider">
+		<img id="skin" src="images/empty.png">
+	</div>
+	<!-- slider hair: -->
+	<div class="slider">
+		<img id="hair" class="color1" src="images/empty.png">
+	</div>
+		<!-- slider eyes: -->
+	<div class="slider">
+		<img id="eyes" class="color1" src="images/empty.png">
+	</div>
+		<!-- slider nose: -->
+	<div class="slider">
+		<img id="nose" src="images/empty.png">
+	</div>
+		<!-- slider mouth: -->
+	<div class="slider">
+		<img id="mouth" class="color1" src="images/empty.png">
+	</div>
+		<!-- slider top: -->
+	<div class="slider">
+		<img id="top" class="color1" src="images/empty.png">
+	</div>
+		<!-- slider bottom: -->
+	<div class="slider">
+		<img id="bottom" class="color1" src="images/empty.png">
+	</div>
+		<!-- slider shoes: -->
+	<div class="slider">
+		<img id="shoes" src="images/empty.png">
+	</div>
+		<!-- slider gadget: -->
+	<div class="slider">
+		<img id="gadget" class="color1" src="images/empty.png">
+	</div>
+		<!-- slider back: -->
+		<!-- na razie wylaczony -->
+<!-- 	<div class="slider">
+		<img id="back" src="images/empty.png">
+	</div> -->
+    
+</section>
+
+<!-- opcje kolorystyczne dla menu 2 HAIR: -->
+<div id="hair1color" class="colorPicker">
+  <div class="colorSwatch hair1color1"></div>
+  <div class="colorSwatch hair1color2"></div>
+  <div class="colorSwatch hair1color3"></div>
+  <div class="colorSwatch hair1color4"></div>
+  <div class="colorSwatch hair1color5"></div>
+  <div class="colorSwatch hair1color6"></div>
+</div>
+<div id="hair2color" class="colorPicker">
+  <div class="colorSwatch hair2color1"></div>
+  <div class="colorSwatch hair2color2"></div>
+  <div class="colorSwatch hair2color3"></div>
+  <div class="colorSwatch hair2color4"></div>
+  <div class="colorSwatch hair2color5"></div>
+  <div class="colorSwatch hair2color6"></div>
+</div>
+<div id="hair3color" class="colorPicker">
+  <div class="colorSwatch hair3color1"></div>
+  <div class="colorSwatch hair3color2"></div>
+  <div class="colorSwatch hair3color3"></div>
+  <div class="colorSwatch hair3color4"></div>
+  <div class="colorSwatch hair3color5"></div>
+  <div class="colorSwatch hair3color6"></div>
+</div>
+<div id="hair4color" class="colorPicker">
+  <div class="colorSwatch hair4color1"></div>
+  <div class="colorSwatch hair4color2"></div>
+  <div class="colorSwatch hair4color3"></div>
+  <div class="colorSwatch hair4color4"></div>
+  <div class="colorSwatch hair4color5"></div>
+  <div class="colorSwatch hair4color6"></div>
+</div>
+<div id="hair5color" class="colorPicker">
+  <div class="colorSwatch hair5color1"></div>
+  <div class="colorSwatch hair5color2"></div>
+  <div class="colorSwatch hair5color3"></div>
+  <div class="colorSwatch hair5color4"></div>
+  <div class="colorSwatch hair5color5"></div>
+  <div class="colorSwatch hair5color6"></div>
+</div>
+<div id="hair6color" class="colorPicker">
+  <div class="colorSwatch hair6color1"></div>
+  <div class="colorSwatch hair6color2"></div>
+  <div class="colorSwatch hair6color3"></div>
+  <div class="colorSwatch hair6color4"></div>
+  <div class="colorSwatch hair6color5"></div>
+  <div class="colorSwatch hair6color6"></div>
+</div>
+<div id="hair7color" class="colorPicker">
+  <div class="colorSwatch hair7color1"></div>
+  <div class="colorSwatch hair7color2"></div>
+  <div class="colorSwatch hair7color3"></div>
+  <div class="colorSwatch hair7color4"></div>
+  <div class="colorSwatch hair7color5"></div>
+  <div class="colorSwatch hair7color6"></div>
+</div>
+<div id="hair8color" class="colorPicker">
+  <div class="colorSwatch hair8color1"></div>
+  <div class="colorSwatch hair8color2"></div>
+  <div class="colorSwatch hair8color3"></div>
+  <div class="colorSwatch hair8color4"></div>
+  <div class="colorSwatch hair8color5"></div>
+  <div class="colorSwatch hair8color6"></div>
+</div>
+<div id="hair9color" class="colorPicker">
+  <div class="colorSwatch hair9color1"></div>
+  <div class="colorSwatch hair9color2"></div>
+  <div class="colorSwatch hair9color3"></div>
+  <div class="colorSwatch hair9color4"></div>
+  <div class="colorSwatch hair9color5"></div>
+  <div class="colorSwatch hair9color6"></div>
+</div>
+<div id="hair10color" class="colorPicker">
+  <div class="colorSwatch hair10color1"></div>
+  <div class="colorSwatch hair10color2"></div>
+  <div class="colorSwatch hair10color3"></div>
+  <div class="colorSwatch hair10color4"></div>
+  <div class="colorSwatch hair10color5"></div>
+  <div class="colorSwatch hair10color6"></div>
+</div>
+<div id="hair11color" class="colorPicker">
+  <div class="colorSwatch hair11color1"></div>
+  <div class="colorSwatch hair11color2"></div>
+  <div class="colorSwatch hair11color3"></div>
+  <div class="colorSwatch hair11color4"></div>
+  <div class="colorSwatch hair11color5"></div>
+  <div class="colorSwatch hair11color6"></div>
+</div>
+<div id="hair12color" class="colorPicker">
+  <div class="colorSwatch hair12color1"></div>
+  <div class="colorSwatch hair12color2"></div>
+  <div class="colorSwatch hair12color3"></div>
+  <div class="colorSwatch hair12color4"></div>
+  <div class="colorSwatch hair12color5"></div>
+  <div class="colorSwatch hair12color6"></div>
+</div>
+<div id="hair13color" class="colorPicker">
+  <div class="colorSwatch hair13color1"></div>
+  <div class="colorSwatch hair13color2"></div>
+  <div class="colorSwatch hair13color3"></div>
+  <div class="colorSwatch hair13color4"></div>
+  <div class="colorSwatch hair13color5"></div>
+  <div class="colorSwatch hair13color6"></div>
+</div>
+<div id="hair14color" class="colorPicker">
+  <div class="colorSwatch hair14color1"></div>
+  <div class="colorSwatch hair14color2"></div>
+  <div class="colorSwatch hair14color3"></div>
+  <div class="colorSwatch hair14color4"></div>
+  <div class="colorSwatch hair14color5"></div>
+  <div class="colorSwatch hair14color6"></div>
+</div>
+<div id="hair15color" class="colorPicker">
+  <div class="colorSwatch hair15color1"></div>
+  <div class="colorSwatch hair15color2"></div>
+  <div class="colorSwatch hair15color3"></div>
+  <div class="colorSwatch hair15color4"></div>
+  <div class="colorSwatch hair15color5"></div>
+  <div class="colorSwatch hair15color6"></div>
+</div>
+<div id="hair16color" class="colorPicker">
+  <div class="colorSwatch hair16color1"></div>
+  <div class="colorSwatch hair16color2"></div>
+  <div class="colorSwatch hair16color3"></div>
+  <div class="colorSwatch hair16color4"></div>
+  <div class="colorSwatch hair16color5"></div>
+  <div class="colorSwatch hair16color6"></div>
+</div>
+<div id="hair17color" class="colorPicker">
+  <div class="colorSwatch hair17color1"></div>
+  <div class="colorSwatch hair17color2"></div>
+  <div class="colorSwatch hair17color3"></div>
+  <div class="colorSwatch hair17color4"></div>
+  <div class="colorSwatch hair17color5"></div>
+  <div class="colorSwatch hair17color6"></div>
+</div>
+<div id="hair18color" class="colorPicker">
+  <div class="colorSwatch hair18color1"></div>
+  <div class="colorSwatch hair18color2"></div>
+  <div class="colorSwatch hair18color3"></div>
+  <div class="colorSwatch hair18color4"></div>
+  <div class="colorSwatch hair18color5"></div>
+  <div class="colorSwatch hair18color6"></div>
+</div>
+
+<!-- opcje kolorystyczne dla menu 3 EYES: -->
+<div id="eyes1color" class="colorPicker">
+  <div class="colorSwatch eyes1color1"></div>
+  <div class="colorSwatch eyes1color2"></div>
+  <div class="colorSwatch eyes1color3"></div>
+  <div class="colorSwatch eyes1color4"></div>
+  <div class="colorSwatch eyes1color5"></div>
+</div>
+<div id="eyes2color" class="colorPicker">
+  <div class="colorSwatch eyes2color1"></div>
+  <div class="colorSwatch eyes2color2"></div>
+  <div class="colorSwatch eyes2color3"></div>
+  <div class="colorSwatch eyes2color4"></div>
+  <div class="colorSwatch eyes2color5"></div>
+</div>
+<div id="eyes3color" class="colorPicker">
+  <div class="colorSwatch eyes3color1"></div>
+  <div class="colorSwatch eyes3color2"></div>
+  <div class="colorSwatch eyes3color3"></div>
+  <div class="colorSwatch eyes3color4"></div>
+  <div class="colorSwatch eyes3color5"></div>
+  <div class="colorSwatch eyes3color6"></div>
+</div>
+<div id="eyes4color" class="colorPicker">
+  <div class="colorSwatch eyes4color1"></div>
+  <div class="colorSwatch eyes4color2"></div>
+  <div class="colorSwatch eyes4color3"></div>
+  <div class="colorSwatch eyes4color4"></div>
+  <div class="colorSwatch eyes4color5"></div>
+  <div class="colorSwatch eyes4color6"></div>
+</div>
+<div id="eyes5color" class="colorPicker">
+  <div class="colorSwatch eyes5color1"></div>
+  <div class="colorSwatch eyes5color2"></div>
+  <div class="colorSwatch eyes5color3"></div>
+  <div class="colorSwatch eyes5color4"></div>
+  <div class="colorSwatch eyes5color5"></div>
+</div>
+<div id="eyes6color" class="colorPicker">
+  <div class="colorSwatch eyes6color1"></div>
+  <div class="colorSwatch eyes6color2"></div>
+  <div class="colorSwatch eyes6color3"></div>
+  <div class="colorSwatch eyes6color4"></div>
+  <div class="colorSwatch eyes6color5"></div>
+</div>
+<div id="eyes8color" class="colorPicker">
+  <div class="colorSwatch eyes8color1"></div>
+  <div class="colorSwatch eyes8color2"></div>
+  <div class="colorSwatch eyes8color3"></div>
+  <div class="colorSwatch eyes8color4"></div>
+  <div class="colorSwatch eyes8color5"></div>
+</div>
+<div id="eyes9color" class="colorPicker">
+  <div class="colorSwatch eyes9color1"></div>
+  <div class="colorSwatch eyes9color2"></div>
+  <div class="colorSwatch eyes9color3"></div>
+  <div class="colorSwatch eyes9color4"></div>
+  <div class="colorSwatch eyes9color5"></div>
+</div>
+<!-- opcje kolorystyczne dla menu 3 7 okularki: -->
+<div id="eyes7color" class="colorPicker">
+  <div class="colorSwatch eyes7color1"></div>
+  <div class="colorSwatch eyes7color2"></div>
+  <div class="colorSwatch eyes7color3"></div>
+</div>
+<!-- opcje kolorystyczne dla menu 4 mouth: -->
+<div id="mouth8color" class="colorPicker">
+  <div class="colorSwatch mouth8color1"></div>
+  <div class="colorSwatch mouth8color2"></div>
+  <div class="colorSwatch mouth8color3"></div>
+  <div class="colorSwatch mouth8color4"></div>
+  <div class="colorSwatch mouth8color5"></div>
+  <div class="colorSwatch mouth8color6"></div>
+</div>
+<div id="mouth9color" class="colorPicker">
+  <div class="colorSwatch mouth9color1"></div>
+  <div class="colorSwatch mouth9color2"></div>
+  <div class="colorSwatch mouth9color3"></div>
+  <div class="colorSwatch mouth9color4"></div>
+  <div class="colorSwatch mouth9color5"></div>
+  <div class="colorSwatch mouth9color6"></div>
+</div>
+<div id="mouth10color" class="colorPicker">
+  <div class="colorSwatch mouth10color1"></div>
+  <div class="colorSwatch mouth10color2"></div>
+  <div class="colorSwatch mouth10color3"></div>
+  <div class="colorSwatch mouth10color4"></div>
+  <div class="colorSwatch mouth10color5"></div>
+  <div class="colorSwatch mouth10color6"></div>
+</div>
+<div id="mouth11color" class="colorPicker">
+  <div class="colorSwatch mouth11color1"></div>
+  <div class="colorSwatch mouth11color2"></div>
+  <div class="colorSwatch mouth11color3"></div>
+  <div class="colorSwatch mouth11color4"></div>
+  <div class="colorSwatch mouth11color5"></div>
+  <div class="colorSwatch mouth11color6"></div>
+</div>
+<div id="mouth12color" class="colorPicker">
+  <div class="colorSwatch mouth12color1"></div>
+  <div class="colorSwatch mouth12color2"></div>
+  <div class="colorSwatch mouth12color3"></div>
+  <div class="colorSwatch mouth12color4"></div>
+  <div class="colorSwatch mouth12color5"></div>
+  <div class="colorSwatch mouth12color6"></div>
+</div>
+<!-- opcje kolorystyczne dla menu 5 top: -->
+<div id="top1color" class="colorPicker">
+  <div class="colorSwatch top1color1"></div>
+  <div class="colorSwatch top1color2"></div>
+  <div class="colorSwatch top1color3"></div>
+  <div class="colorSwatch top1color4"></div>
+</div>
+<div id="top2color" class="colorPicker">
+  <div class="colorSwatch top2color1"></div>
+  <div class="colorSwatch top2color2"></div>
+  <div class="colorSwatch top2color3"></div>
+  <div class="colorSwatch top2color4"></div>
+</div>
+<div id="top3color" class="colorPicker">
+  <div class="colorSwatch top3color1"></div>
+  <div class="colorSwatch top3color2"></div>
+  <div class="colorSwatch top3color3"></div>
+  <div class="colorSwatch top3color4"></div>
+  <div class="colorSwatch top3color5"></div>
+</div>
+<!-- opcje kolorystyczne dla menu 7 bottom: -->
+<div id="bottom1color" class="colorPicker">
+  <div class="colorSwatch bottom1color1"></div>
+  <div class="colorSwatch bottom1color2"></div>
+  <div class="colorSwatch bottom1color3"></div>
+  <div class="colorSwatch bottom1color4"></div>
+  <div class="colorSwatch bottom1color5"></div>
+</div>
+<div id="bottom2color" class="colorPicker">
+  <div class="colorSwatch bottom2color1"></div>
+  <div class="colorSwatch bottom2color2"></div>
+  <div class="colorSwatch bottom2color3"></div>
+</div>
+<div id="bottom3color" class="colorPicker">
+  <div class="colorSwatch bottom3color1"></div>
+  <div class="colorSwatch bottom3color2"></div>
+  <div class="colorSwatch bottom3color3"></div>
+  <div class="colorSwatch bottom3color4"></div>
+  <div class="colorSwatch bottom3color5"></div>
+  <div class="colorSwatch bottom3color6"></div>
+</div>
+<div id="bottom4color" class="colorPicker">
+  <div class="colorSwatch bottom4color1"></div>
+  <div class="colorSwatch bottom4color2"></div>
+  <div class="colorSwatch bottom4color3"></div>
+</div>
+<div id="bottom5color" class="colorPicker">
+  <div class="colorSwatch bottom5color1"></div>
+  <div class="colorSwatch bottom5color2"></div>
+  <div class="colorSwatch bottom5color3"></div>
+  <div class="colorSwatch bottom5color4"></div>
+</div>
+<!-- opcje kolorystyczne dla menu 9: -->
+<div id="gadget2color" class="colorPicker">
+  <div class="colorSwatch gadget2color1"></div>
+  <div class="colorSwatch gadget2color2"></div>
+  <div class="colorSwatch gadget2color3"></div>
+</div>
+
+
+<div id="doneButton">
+<!--   <div class='doneButtonText'><span id='ok'>OK</span><br>I'm done!</div> -->
+</div>
+
+</body>
+</html>

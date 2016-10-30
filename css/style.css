@@ -1,0 +1,634 @@
+/*font*/
+@font-face {
+    font-family: 'blogger_sansbold';
+    src: url('../fonts/blogger_sans-bold.woff2') format('woff2'),
+         url('../fonts/blogger_sans-bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body{
+	font-family: 'blogger_sansbold', sans-serif;
+	margin: 0;
+	padding: 7vmin;
+	background-color: #FF3D00;
+}
+/*style dla strzalek*/
+.arrow{
+	display: inline-block;
+	cursor: pointer; 
+	cursor: hand;
+}
+div[id*=next] {
+	height: 120px;
+	width: 120px;
+	background-image: url("../images/arrow-right.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: transparent;
+
+
+	position: fixed;
+	/*right: 7vmin;*/
+	top: 50%;
+	transform: translateY(-60%);
+
+
+	right: 30%;
+
+
+	
+	/*transform: translateX(-50%);*/
+
+	z-index: 1;
+}
+div[id*=prev] {
+	height: 120px;
+	width: 120px;
+	background-image: url("../images/arrow-left.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: transparent;
+
+	position: fixed;
+	/*right: 7vmin;*/
+	top: 50%;
+	transform: translateY(-60%);
+
+
+	left: 30%;
+
+	
+	/*transform: translateX(-30%);*/
+	/*transform: translateX(-50%);*/
+
+	z-index: 1;
+}
+
+
+
+/*style akcji dla strzalek prawo lewo:*/
+div[id*=next]:hover {
+	background-image: url("../images/arrow-rightHover.svg");
+}
+div[id*=prev]:hover {
+	background-image: url("../images/arrow-leftHover.svg");
+}
+div[id*=next]:active{
+	background-image: url("../images/arrow-rightActive.svg");
+}
+div[id*=prev]:active{
+	background-image: url("../images/arrow-leftActive.svg");
+}
+
+
+/*style dla strzalek w menu:*/
+#menuUp{
+	height: 115px;
+	width: 115px;
+	background-image: url("../images/arrow-up.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: transparent;
+}
+#menuDown{
+	height: 115px;
+	width: 115px;
+	background-image: url("../images/arrow-down.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	margin-top: 2vmin;
+}
+#menuUp:hover{
+	background-image: url("../images/arrow-upHover.svg");
+}
+#menuDown:hover{
+	background-image: url("../images/arrow-downHover.svg");
+}
+#menuUp:active{
+	background-image: url("../images/arrow-upActive.svg");
+}
+#menuDown:active{
+	background-image: url("../images/arrow-downActive.svg");
+}
+/*#menuUp, #menuDown{
+    -ms-transform: rotate(90deg); /* IE 9 */
+    /*-webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    /*transform: rotate(90deg);*/
+/*}*/
+/*#menuDown:hover, #menuUp:hover{*/
+	/*color: white;*/
+/*}*/
+/*#menuDown:active, #menuUp:active{*/
+	/*color: blue;*/
+/*}*/
+/*style dla menu:*/
+ul {
+	font-size: 3vmin;
+	display: inline-block;
+	position: fixed;
+	/*right: 7vmin;*/
+	top: 50%;
+	transform: translateY(-60%);
+	cursor: pointer; 
+	cursor: hand;
+}
+ul li[id*=choose]{
+	color: black;
+	/*text-outline: 2px 2px #ff0000;*/
+}
+ul li[id*=choose]:hover{
+	color: white;
+/*	cursor: pointer; 
+	cursor: hand;*/
+	/*text-outline: 2px 2px #ff0000;*/
+}
+ul li[id*=choose]:active{
+	color: black;
+	margin-left: 10px;
+/*	cursor: pointer; 
+	cursor: hand;*/
+	/*text-outline: 2px 2px #ff0000;*/
+		/*text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;*/
+
+}
+.active {
+	color: white !important;
+	/*font-family: serif;*/
+	/*text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;*/
+/*
+	text-shadow: 
+	1px 1px 0 #000,
+    -1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000,
+    0px 1px 0 #000,
+    0px -1px 0 #000,
+    -1px 0px 0 #000,
+    1px 0px 0 #000,
+    2px 2px 0 #000,
+    -2px 2px 0 #000,
+    2px -2px 0 #000,
+    -2px -2px 0 #000,
+    0px 2px 0 #000,
+    0px -2px 0 #000,
+    -2px 0px 0 #000,
+    2px 0px 0 #000,
+    1px 2px 0 #000,
+    -1px 2px 0 #000,
+    1px -2px 0 #000,
+    -1px -2px 0 #000,
+    2px 1px 0 #000,
+    -2px 1px 0 #000,
+    2px -1px 0 #000,
+    -2px -1px 0 #000;*/
+
+
+/*      -webkit-text-fill-color: black;
+  -webkit-text-stroke-color: red;
+  -webkit-text-stroke-width: 22.00px; */
+
+
+
+
+	/*border-bottom: 10px solid blue;*/
+	/*text-shadow: 2px 2px #ff0000;*/
+	/*box-shadow: 10px 10px 0px #888888;*/
+}
+li.active{
+	/*box-shadow: 10px 10px 0px #888888;*/
+	/*border: 10px solid blue;*/
+}
+/*stle dla glownego kontenera z ludzikiem*/
+.ludzikContainer{
+	/*width: 100%;*/
+	height: 600px;
+	width: 600px;
+	background-image: url("../images/ludzik.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	display: inline-block;
+	/*margin: 0 auto;*/
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -58%);
+
+	/*z-index: 0;*/
+	/*margin: 0 auto;*/
+}
+/*style dla slidera:*/
+.slider{
+  height: 600px;
+}
+
+.slider ul{
+  list-style: none;
+  /*width: 3000px;*/
+  margin: 0px;
+  padding: 0px;
+  margin-before: 0px;
+}
+
+.slider li{
+	display: inline;
+	margin: 0px;
+	padding: 0px;
+}
+div.slider{
+	overflow: hidden;
+	width: 600px;
+	/*position: relative;*/
+
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+ul.slider{
+	position: absolute;
+}
+
+/*style dla opcji kolorów:*/
+.colorPicker{
+	position: fixed;
+	right: 7vmin;
+	top: 50%;
+	transform: translateY(-60%);
+}
+.colorSwatch{
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	margin-bottom: 22px;
+	box-sizing: border-box;
+	cursor: pointer; 
+	cursor: hand;
+}
+.colorSwatch:hover{
+	border: 10px solid white;
+}
+.colorSwatch:active{
+	border: 10px solid black;
+}
+/*color swatches:*/
+/*opcje kolorystyczne dla menu 2 HAIR:*/
+.hair1color1, 
+.hair2color1,
+.hair3color1,
+.hair4color1,
+.hair5color1,
+.hair6color1,
+.hair7color1,
+.hair8color1,
+.hair9color1,
+.hair10color1,
+.hair11color1,
+.hair12color1,
+.hair13color1,
+.hair14color1,
+.hair15color1,
+.hair16color1,
+.hair17color1,
+.hair18color1,
+.mouth8color1,
+.mouth9color1,
+.mouth10color1,
+.mouth11color1,
+.mouth12color1{
+	background-color: #f4d7a4;
+}
+.hair1color2, 
+.hair2color2,
+.hair3color2,
+.hair4color2,
+.hair5color2,
+.hair6color2,
+.hair7color2,
+.hair8color2,
+.hair9color2,
+.hair10color2,
+.hair11color2,
+.hair12color2,
+.hair13color2,
+.hair14color2,
+.hair15color2,
+.hair16color2,
+.hair17color2,
+.hair18color2,
+.mouth8color2,
+.mouth9color2,
+.mouth10color2,
+.mouth11color2,
+.mouth12color2{
+	background-color: #d35e15;
+}
+.hair1color3, 
+.hair2color3,
+.hair3color3,
+.hair4color3,
+.hair5color3,
+.hair6color3,
+.hair7color3,
+.hair8color3,
+.hair9color3,
+.hair10color3,
+.hair11color3,
+.hair12color3,
+.hair13color3,
+.hair14color3,
+.hair15color3,
+.hair16color3,
+.hair17color3,
+.hair18color3,
+.mouth8color3,
+.mouth9color3,
+.mouth10color3,
+.mouth11color3,
+.mouth12color3{
+	background-color: #784919;
+}
+.hair1color4, 
+.hair2color4,
+.hair3color4,
+.hair4color4,
+.hair5color4,
+.hair6color4,
+.hair7color4,
+.hair8color4,
+.hair9color4,
+.hair10color4,
+.hair11color4,
+.hair12color4,
+.hair13color4,
+.hair14color4,
+.hair15color4,
+.hair16color4,
+.hair17color4,
+.hair18color4,
+.mouth8color4,
+.mouth9color4,
+.mouth10color4,
+.mouth11color4,
+.mouth12color4{
+	background-color: #452a0f;
+}
+.hair1color5, 
+.hair2color5,
+.hair3color5,
+.hair4color5,
+.hair5color5,
+.hair6color5,
+.hair7color5,
+.hair8color5,
+.hair9color5,
+.hair10color5,
+.hair11color5,
+.hair12color5,
+.hair13color5,
+.hair14color5,
+.hair15color5,
+.hair16color5,
+.hair17color5,
+.hair18color5,
+.mouth8color5,
+.mouth9color5,
+.mouth10color5,
+.mouth11color5,
+.mouth12color5{
+	background-color: black;
+}
+.hair1color6, 
+.hair2color6,
+.hair3color6,
+.hair4color6,
+.hair5color6,
+.hair6color6,
+.hair7color6,
+.hair8color6,
+.hair9color6,
+.hair10color6,
+.hair11color6,
+.hair12color6,
+.hair13color6,
+.hair14color6,
+.hair15color6,
+.hair16color6,
+.hair17color6,
+.hair18color6,
+.mouth8color6,
+.mouth9color6,
+.mouth10color6,
+.mouth11color6,
+.mouth12color6{
+	background-color: #999999;
+}
+/*opcje kolorystyczne dla menu 3 eyes:*/
+.eyes1color1,
+.eyes2color1,
+.eyes3color1,
+.eyes4color1,
+.eyes5color1,
+.eyes6color1,
+.eyes7color1,
+.eyes8color1,
+.eyes9color1{
+	background-color: #000000;
+}
+.eyes1color2,
+.eyes2color2,
+.eyes3color2,
+.eyes4color2,
+.eyes5color2,
+.eyes6color2,
+.eyes8color2,
+.eyes9color2{
+	background-color: #3C5C7C;
+}
+.eyes1color3,
+.eyes2color3,
+.eyes3color3,
+.eyes4color3,
+.eyes5color3,
+.eyes6color3,
+.eyes8color3,
+.eyes9color3{
+	background-color: #56A981;
+}
+.eyes1color4,
+.eyes2color4,
+.eyes3color4,
+.eyes4color4,
+.eyes5color4,
+.eyes6color4,
+.eyes8color4,
+.eyes9color4{
+	background-color: #3E260E;
+}
+.eyes1color5,
+.eyes2color5,
+.eyes3color5,
+.eyes4color5,
+.eyes5color5,
+.eyes6color5,
+.eyes7color2,
+.eyes8color5,
+.eyes9color5,
+.top2color1,
+.bottom3color6,
+.bottom5color3{
+	background-color: #FFFFFF;
+}
+.eyes7color3{
+	background-color: #ffcc00;
+}
+.eyes3color6,
+.eyes4color6{
+		background-color: #DA8F96;
+}
+/*opcje kolorystyczne dla menu 5 top:*/
+.top1color1,
+.top2color3{
+	background-color: #ec041c;
+}
+.top1color2{
+	background-color: #009782;
+}
+.top1color3,
+.top2color4{
+	background-color: #0040b9;
+}
+.top1color4{
+	background-color: #b3b3b3;
+}
+.top2color2,
+.bottom1color2,
+.bottom2color2,
+.bottom3color2,
+.bottom4color2,
+.bottom5color2{
+	background-color: #1a1a1a;
+}
+.top3color1{
+	background-color: #ab1528;
+}
+.top3color2{
+	background-color: #065c37;
+}
+.top3color3{
+	background-color: #ff9966;
+}
+.top3color4{
+	background-color: #9b999a;
+}
+.top3color5{
+	background-color: #336699;
+}
+/*bottom1color swatches:*/
+.bottom1color1,
+.bottom3color1,
+.bottom5color1{
+	background-color: #27527c;
+	/*background-color: green;*/
+}
+.bottom1color3,
+.bottom2color1,
+.bottom3color3,
+.bottom4color1{
+	background-color: #5f6858;
+	/*background-color: green;*/
+}
+.bottom1color4,
+.bottom3color4{
+	background-color: #cc9933;
+	/*background-color: green;*/
+}
+.bottom1color5{
+	background-color: #31384a;
+	/*background-color: red;*/
+}
+.bottom3color5{
+	background-color: #0152a1;
+}
+/*bottom2color swatches:*/
+.bottom2color3,
+.bottom4color3{
+	background-color: #97634b;
+	/*background-color: green;*/
+}
+/*bottom5color swatches:*/
+.bottom5color4{
+	background-color: #c40b13;
+	/*background-color: green;*/
+}
+
+
+/*gadget2color swatches:*/
+.gadget2color1{
+	background-color: #009933;
+	/*background-color: green;*/
+}
+.gadget2color2{
+	background-color: #0a4595;
+	/*background-color: blue;*/
+}
+.gadget2color3{
+	background-color: #d5212a;
+	/*background-color: red;*/
+}
+
+/*done button style*/
+#doneButton{
+	height: 100px;
+	width: 100px;
+	background-image: url("../images/doneButton.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: absolute;
+	right: 7vmin;
+	bottom: 7vmin;
+	cursor: pointer; 
+	cursor: hand;
+}
+#doneButton:hover{
+	background-image: url("../images/doneButtonText.svg");
+}
+/*zachowanie guzika ok jeżeli test ma być tekstem:*/
+/*.doneButtonText {
+	visibility: hidden;
+	color: white;
+	font-size: 1em;
+	text-align: center;
+}
+#ok{
+	font-size: 2em;
+	color: blue;
+	margin: 0 auto;
+}*/
+
+/*style responsywne:*/
+@media all and (max-width: 1366px) {
+	/*strzalki przy ludziku:*/
+	div[id*=next] {
+		right: 20%;
+	}
+	div[id*=prev] {
+		left: 20%;
+	}
+	/*kulki kolorow:*/
+	.colorPicker{
+		position: fixed;
+		left: 50%;
+		text-align: center;
+		transform: translateX(-50%);
+		bottom: 0;
+		top:84%;
+	}
+	.colorSwatch{
+		display: inline-block;
+		margin: auto 11px;
+	}
+}
